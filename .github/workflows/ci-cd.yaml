@@ -53,5 +53,5 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
-        kubectl set image deployment/wisecow-deployment wisecow=${{ secrets.DOCKER_REPOSITORY }}:latest
+        kubectl set image deployment/wisecow-deployment wisecow=${{ secrets.DOCKER_HUB_REPO }}:latest
         kubectl rollout status deployment/wisecow-deployment
